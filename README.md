@@ -29,7 +29,7 @@ assert generate_sentences(["Vlad", "John"], ["drives"], ["car", "motorcycle", "b
 Implement a class Airplane that keeps track of the following features of an airplane:
 
 * consumption: an integer representing number of litres consumed per km of distance
-* position (x, y): a pair of integers representing a position of the plane on a map. Can be a tuple if chosen language supports tuples (assume that the airplane can only be in one of the positions of the 1 km x 1 km grid)
+* position (x, y): a pair/tuple of integers representing a position of the plane on a map. (assume that the airplane can only be in one of the positions of the 1 km x 1 km grid)
 * fuel level: a floating point number representing the current fuel level in litres
 
 ##### Implement the following methods:
