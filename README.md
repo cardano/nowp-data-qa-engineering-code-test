@@ -96,7 +96,7 @@ Consider the following scenario:
 
 You have joined a company as a test automation consultant for a system at ACME Finance plc. Currently all testing that is conducted is manual. You have been tasked with automating as much of the testing as possible.
 
-The system under test is used to measure the quality of the data within the organisation. It takes change tracking data from the Data Warehouse as an input. A batch process (built in Java with Spring Batch) runs on a daily basis, overnight to capture the changes, and measure the quality of the data using a series of rules, implemented in Java. The rules yield a set of errors and warnings for each field that breeches a rule, and persists these exceptions in a database. The data in said database is surfaced in a dashboard for people business users to examine.
+The system under test is used to measure the quality of the data within the organisation. It takes change tracking data from the Data Warehouse as an input. A batch process (built in Java with Spring Batch) runs on a daily basis, overnight to capture the changes, and measure the quality of the data using a series of rules, implemented in Java. The rules yield a set of errors and warnings for each field that breeches a rule, and persists these exceptions in a database. The data in said database is surfaced in a dashboard for business users to examine.
 
 Prepare a report to advise the client how an automated test solution could be implemented to provide rapid feedback and regression testing of the system detailed above.
 
