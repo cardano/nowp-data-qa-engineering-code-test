@@ -1,10 +1,10 @@
 # NOW: Pensions Data QA Engineering Code Test
 
 ### Instructions
-For questions 1-2 you are free to choose Python 3.x or Java 11.
+For questions 1-2 please use Python 3.x
 
-* Do not use any third party dependencies except PyTest for Python, and JUnit/Hamcrest for Java.
-* If using Java, please use Java 11 and the included build.gradle
+* Do not use any third party dependencies except PyTest
+* For questions 1 & 2, please provide separate .py files for each question and for each set of tests.
 * Code should be covered with adequate tests
 * Code should be readable and clean
 * For question 3 please provide a .sql file with your queries inside. Please state which SQL dialect you used.
@@ -113,6 +113,7 @@ Prepare a report to advise the client how an automated test solution could be im
 **Please consider:**
 * Approach and strategy
 * Technologies utilised
+* Reporting and gates
 * Techniques used
 * Additional questions you would need to ask
 
@@ -122,14 +123,20 @@ Consider the following scenario:
 
 The Data Governanace Manager has approached you, and asked you to prepare some requirements in BDD/Cucumber format for the following set of validation rules:
 
-A payroll file is comprised of the following fields:
+##### A payroll file is comprised of the following fields:
+
 First Name (String, maximum of 20 characters, required, only a-z)
+
 Last Name (String, maximum of 20 characters, required, only a-z, - and ' ')
+
 Date of Birth (Date, format DD/MM/YYYY, required, can't be in the future, member must be 16 but less than 92 years old)
+
 National insurance number (String, maximum of x characters, must start with x or y or z)
+
 Gross pay (Money, must be positive, required, can't be more than contribution amount)
+
 Contribution amount (Money, must be positive, required, can't be more more than gross pay)
 
-Write a set of BDD scenarios/requirements for the above scenario.
+Write a set of BDD/Gherkin/Cucumber scenarios/requirements/tests for the above scenario.
 
 Please submit your answer as a set of .feature files, broken down/grouped as you see fit.
