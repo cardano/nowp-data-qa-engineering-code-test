@@ -125,18 +125,11 @@ The Data Governanace Manager has approached you, and asked you to prepare some r
 
 ##### A payroll file is comprised of the following fields:
 
-First Name (String, maximum of 20 characters, required, only a-z)
-
-Last Name (String, maximum of 20 characters, required, only a-z, - and ' ')
-
-Date of Birth (Date, format DD/MM/YYYY, required, can't be in the future, member must be 16 but less than 92 years old)
-
-National insurance number (String, maximum of x characters, must start with x or y or z)
-
-Gross pay (Money, must be positive, required, can't be more than contribution amount)
-
-Contribution amount (Money, must be positive, required, can't be more more than gross pay)
-
-Write a set of BDD/Gherkin/Cucumber scenarios/requirements/tests for the above scenario.
-
-Please submit your answer as a set of .feature files, broken down/grouped as you see fit.
+* First Name (String, maximum of 20 characters, required, only a-z)
+* Last Name (String, maximum of 20 characters, required, only a-z, - and ' ')
+* Date of Birth (Date, format DD/MM/YYYY, required, can't be in the future, member must be 16 but less than 92 years old)
+* National insurance number (String, maximum of x characters, must start with x or y or z)
+* Gross pay (Money, must be positive, required, can't be more than contribution amount)
+* Contribution amount (Money, must be positive, required, can't be more more than gross pay)
+* Write a set of BDD/Gherkin/Cucumber scenarios/requirements/tests for the above scenario.
+* Please submit your answer as a set of .feature files, broken down/grouped as you see fit.
