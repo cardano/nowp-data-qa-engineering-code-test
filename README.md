@@ -25,16 +25,6 @@ assert generate_sentences(["Mark", "Mary"], ["hates", "loves"], ["apples", "bana
 assert generate_sentences(["Vlad", "John"], ["drives"], ["car", "motorcycle", "bus"])) == "John drives bus. John drives car. John drives motorcycle. Vlad drives bus. Vlad drives car. Vlad drives motorcycle."
 ```
 
-#### Indicative test cases (Java 11):
-
-``` java
-assertThat(generateSentences(List.of("Mark", "Mary"), List.of("hates", "loves"), List.of("apples", "bananas")), is("Mark loves apples. Mark loves bananas. Mary hates apples. Mary hates bananas. Mary loves apples. Mary loves bananas."));
-```
-
-``` java
-assertThat(generateSentences(List.of("Vlad", "John"), List.of("drives"), List.of("car", "motorcycle", "bus")), is( "John drives bus. John drives car. John drives motorcycle. Vlad drives bus. Vlad drives car. Vlad drives motorcycle."));
-```
-
 ### Question 2: 
 Implement a class Airplane that keeps track of the following features of an airplane:
 
