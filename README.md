@@ -1,9 +1,10 @@
 # NOW: Pensions Data QA Engineering Code Test
 
 ### Instructions
-For questions 1-2 please use Python 3.x
+For questions 1-2 please use Python 3.x or Java 11
 
-* Do not use any third party dependencies except PyTest
+* Do not use any third party dependencies except PyTest (for Python) or JUnit 5 & Hamcrest (for Java)
+* If you use Java, please use Maven or Gradle, your code should build and run tests in one step.
 * For questions 1 & 2, please provide separate .py files for each question and for each set of tests.
 * Code should be covered with adequate tests
 * Code should be readable and clean
@@ -24,6 +25,24 @@ assert generate_sentences(["Mark", "Mary"], ["hates", "loves"], ["apples", "bana
 ``` python
 assert generate_sentences(["Vlad", "John"], ["drives"], ["car", "motorcycle", "bus"])) == "John drives bus. John drives car. John drives motorcycle. Vlad drives bus. Vlad drives car. Vlad drives motorcycle."
 ```
+
+#### Indicative test cases (Java 11):
+
+```java
+  @Test
+  void shouldGenerateSentences() {
+    final String expected = "Mark hates apples. Mark hates bananas. Mark loves apples. Mark loves bananas. Mary hates apples. Mary hates bananas. Mary loves apples. Mary loves bananas.";
+    assertThat(generateSentences(List.of("Mark", "Mary"), List.of("hates", "loves"), List.of("apples", "bananas")), is(expected));
+  }
+```
+
+```java
+  @Test
+  void shouldGenerateSentences() {
+    final String expected ="John drives bus. John drives car. John drives motorcycle. Vlad drives bus. Vlad drives car. Vlad drives motorcycle."
+    assertThat(generateSentences(List.of("Vlad", "John"), List.of("drives"), List.of("car", "motorcycle", "bus")), is(expected));
+  }
+  ```
 
 ### Question 2: 
 Implement a class Airplane that keeps track of the following features of an airplane:
