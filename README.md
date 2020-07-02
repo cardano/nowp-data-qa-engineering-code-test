@@ -1,6 +1,72 @@
 # NOW: Pensions Data QA Engineering Code Test
 
 ### Instructions
+
+### Question 1:
+Describe the test pyramid and which layers you would expect to work on.
+<i>Any diagram tool will do but please return an image that we can easily view</i>
+
+### Question 2:
+Using a framework of choice (e.g. JMeter/Gatling), describe how you would approach load testing a customer facing website that uploads CSV files. The website can have up to 10,000 concurrent users.  
+
+### Question 3:
+You have joined a team who have already created a set of requirements for the Data Validation Engine. They have asked you to join the team and work with them to define the requirements for the remaining features. But first you need to understand the current requirements. Please describe the requirement below.
+
+``` Gherkin
+Feature: Opt-out Date Validation Rules
+
+  As a data owner
+  I want to ensure that an opt-out date is valid
+  So that the member can opt out when a date is provided
+
+  Scenario Outline: Opt-out Date is a valid date
+    Given an <opt_out_date>
+    When we check that it is a valid date
+    Then we expect the following <message>
+    Examples:
+      | opt_out_date | message                       |
+      |              |                               |
+      | 30/02/202    | Invalid opt-out date provided |
+      | 21/03/2020   |                               |
+```
+
+### Question 4:
+
+Consider the following scenario:
+
+You have joined a company as a test automation consultant for a system at ACME Finance plc. Currently all testing that is conducted is manual. You have been tasked with automating as much of the testing as possible.
+
+The system under test is used to measure the quality of the data within the organisation. It takes change tracking data from the Data Warehouse as an input. A batch process (built in Java with Spring Batch) runs on a daily basis, overnight to capture the changes, and measure the quality of the data using a series of rules, implemented in Java. The rules yield a set of errors and warnings for each field that breeches a rule, and persists these exceptions in a database. The data in said database is surfaced in a dashboard for business users to examine.
+
+Prepare a report to advise the client how an automated test solution could be implemented to provide rapid feedback and regression testing of the system detailed above.
+
+**Please consider:**
+* Approach and strategy
+* Technologies utilised
+* Reporting and gates
+* Techniques used
+* Additional questions you would need to ask
+
+### Question 5
+
+Consider the following scenario:
+
+The Data Governance Manager has approached you, and asked you to prepare some requirements in BDD/Cucumber format for the following set of validation rules:
+
+##### A payroll file is comprised of the following fields:
+
+* First Name (String, maximum of 20 characters, required, only a-z)
+* Last Name (String, maximum of 20 characters, required, only a-z, - and ' ')
+* Date of Birth (Date, format DD/MM/YYYY, required, can't be in the future, member must be 16 but less than 92 years old)
+* National insurance number (String, maximum of x characters, must start with x or y or z)
+* Gross pay (Money, must be positive, required, can't be more than contribution amount)
+* Contribution amount (Money, must be positive, required, can't be more more than gross pay)
+* Write a set of BDD/Gherkin/Cucumber scenarios/requirements/tests for the above scenario.
+* Please submit your answer as a set of .feature files, broken down/grouped as you see fit.
+
+## Appendix
+This section has programming questions. Pease attempt these if you can.
+
 For questions 1-2 please use Python 3.x or Java 11
 
 * Do not use any third party dependencies except PyTest (for Python) or JUnit 5 & Hamcrest (for Java)
@@ -62,7 +128,6 @@ Implement a class Airplane that keeps track of the following features of an airp
 Assume that the airplane travels in a direct line between two positions (X1, Y1) and
 (X2, Y2). The distance between two locations is computed as the square root of ((X2 − X1)^2 + (Y 2 − Y 1)^2)
 
-
 ### Question 3: 
 Consider the following relational database tables to store information about athletes and their birthplaces.
 
@@ -97,7 +162,7 @@ a. Insert a new city to include, id: 3, name: Tokyo, Country: Japan, Population:
 
 b. Update Tokyo population to 9,73 million.
 
-c. Query the city table for the cities in the northern hemispher and with population greater than 10 million.
+c. Query the city table for the cities in the northern hemisphere and with population greater than 10 million.
 
 d. Query the city table for the sum of the populations of cities in the northern hemisphere.
 
@@ -107,38 +172,4 @@ f. Query for all athletes who were born in the southern hemisphere.
 
 g. Query for female athletes born in a city with population over 5 million.
 
-h. Query for the athlete born in a city that has the highestpopulation.
-
-### Question 4:
-
-Consider the following scenario:
-
-You have joined a company as a test automation consultant for a system at ACME Finance plc. Currently all testing that is conducted is manual. You have been tasked with automating as much of the testing as possible.
-
-The system under test is used to measure the quality of the data within the organisation. It takes change tracking data from the Data Warehouse as an input. A batch process (built in Java with Spring Batch) runs on a daily basis, overnight to capture the changes, and measure the quality of the data using a series of rules, implemented in Java. The rules yield a set of errors and warnings for each field that breeches a rule, and persists these exceptions in a database. The data in said database is surfaced in a dashboard for business users to examine.
-
-Prepare a report to advise the client how an automated test solution could be implemented to provide rapid feedback and regression testing of the system detailed above.
-
-**Please consider:**
-* Approach and strategy
-* Technologies utilised
-* Reporting and gates
-* Techniques used
-* Additional questions you would need to ask
-
-### Question 5
-
-Consider the following scenario:
-
-The Data Governanace Manager has approached you, and asked you to prepare some requirements in BDD/Cucumber format for the following set of validation rules:
-
-##### A payroll file is comprised of the following fields:
-
-* First Name (String, maximum of 20 characters, required, only a-z)
-* Last Name (String, maximum of 20 characters, required, only a-z, - and ' ')
-* Date of Birth (Date, format DD/MM/YYYY, required, can't be in the future, member must be 16 but less than 92 years old)
-* National insurance number (String, maximum of x characters, must start with x or y or z)
-* Gross pay (Money, must be positive, required, can't be more than contribution amount)
-* Contribution amount (Money, must be positive, required, can't be more more than gross pay)
-* Write a set of BDD/Gherkin/Cucumber scenarios/requirements/tests for the above scenario.
-* Please submit your answer as a set of .feature files, broken down/grouped as you see fit.
+h. Query for the athlete born in a city that has the highest population.
