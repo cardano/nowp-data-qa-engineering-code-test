@@ -10,7 +10,7 @@ Describe the test pyramid and which layers you would expect to work on.
 Using a framework of choice (e.g. JMeter/Gatling), describe how you would approach load testing a customer facing website that uploads CSV files. The website can have up to 10,000 concurrent users.  
 
 ### Question 3:
-You have joined a team who have already created a set of requirements for the Data Validation Engine. They have asked you to join the team and work with them to define the requirements for the remaining features. But first you need to understand the current requirements. Please describe the requirement below.
+You have joined a team who have already created a set of requirements for the Data Validation Engine. The team have asked you to work with them to define the requirements for the remaining features. But first you need to understand the current requirements. Please describe the requirement below.
 
 ``` Gherkin
 Feature: Opt-out Date Validation Rules
